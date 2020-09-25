@@ -8,14 +8,3 @@
  * Reproduction and reuse of this material is allowed with credit given to
  *  the original author
  */
-package com.stackfortech.spotlessDemo;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class SpotlessDemoApplicationTests {
-
-  @Test
-  void contextLoads() {}
-}

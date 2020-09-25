@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.3.4.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
+	id "com.diffplug.spotless" version "5.6.1"
 }
 
 group = 'com.stackfortech'
@@ -29,4 +30,16 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+spotless {
+	java {
+		licenseHeaderFile rootProject.file('src/spotless/stackfortech-license.java')
+		importOrder('java', 'javax', 'com', '')
+		trimTrailingWhitespace()
+		removeUnusedImports()
+		endWithNewline()
+		indentWithTabs()
+		//googleJavaFormat()
+	}
 }
